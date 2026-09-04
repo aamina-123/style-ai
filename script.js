@@ -1,19 +1,14 @@
 function startStyling() {
     window.location.href = "styling.html";
 }
-let selectedStyle = {
-    occasion: "",
-    vibe: "",
-    colour: "",
-    season: ""
-};
 
 function selectOption(category, value, button) {
-    selectedStyle[category] = value;
+
+    localStorage.setItem(category, value);
 
     const buttons = button.parentElement.querySelectorAll("button");
 
-    buttons.forEach(btn => {
+    buttons.forEach(function(btn) {
         btn.classList.remove("selected");
     });
 
@@ -21,20 +16,16 @@ function selectOption(category, value, button) {
 }
 
 function generateLook() {
-    if (
-        !selectedStyle.occasion ||
-        !selectedStyle.vibe ||
-        !selectedStyle.colour ||
-        !selectedStyle.season
-    ) {
-        alert("Please select an option from every section ✨");
+
+    const occasion = localStorage.getItem("occasion");
+    const vibe = localStorage.getItem("vibe");
+    const colour = localStorage.getItem("colour");
+    const season = localStorage.getItem("season");
+
+    if (!occasion || !vibe || !colour || !season) {
+        alert("Please select one option from every section ✨");
         return;
     }
-
-    localStorage.setItem(
-        "auraStyle",
-        JSON.stringify(selectedStyle)
-    );
 
     window.location.href = "result.html";
 }
