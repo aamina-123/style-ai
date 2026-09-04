@@ -202,3 +202,28 @@ button:hover {
         padding: 12px 18px;
     }
 }
+.styling-page {
+    display: block !important;
+    min-height: 100vh;
+    padding: 80px 9% !important;
+}
+
+.style-form {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.question {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.question h2,
+.question-number,
+.options {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
