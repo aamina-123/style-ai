@@ -16,17 +16,17 @@
 
         <nav>
             <a href="index.html">Home</a>
-            <a href="#">Discover</a>
+            <a href="styling.html">Discover</a>
             <a href="#">About</a>
         </nav>
     </header>
 
-    <main class="hero">
+    <main class="styling-page">
 
-        <div class="hero-text">
+        <div class="styling-intro">
 
             <p class="small-title">
-                AURA • AI FASHION STYLIST
+                AURA • YOUR PERSONAL AI STYLIST
             </p>
 
             <h1>
@@ -35,17 +35,71 @@
             </h1>
 
             <p class="description">
-                Tell us a little about yourself and let AURA
-                curate a look made just for you.
+                Tell us a little about your style and we'll
+                create a look that feels uniquely yours.
             </p>
 
-            <button>
-                Start Styling →
+        </div>
+
+        <div class="style-form">
+
+            <div class="question">
+                <p class="question-number">01</p>
+                <h2>What's the occasion?</h2>
+
+                <div class="options">
+                    <button>College</button>
+                    <button>Casual</button>
+                    <button>Party</button>
+                    <button>Wedding</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <p class="question-number">02</p>
+                <h2>What's your style vibe?</h2>
+
+                <div class="options">
+                    <button>Classic</button>
+                    <button>Minimal</button>
+                    <button>Trendy</button>
+                    <button>Traditional</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <p class="question-number">03</p>
+                <h2>What colours do you love?</h2>
+
+                <div class="options">
+                    <button>Neutrals</button>
+                    <button>Pastels</button>
+                    <button>Bold</button>
+                    <button>Earthy</button>
+                </div>
+            </div>
+
+            <div class="question">
+                <p class="question-number">04</p>
+                <h2>Choose your season</h2>
+
+                <div class="options">
+                    <button>Summer</button>
+                    <button>Monsoon</button>
+                    <button>Winter</button>
+                    <button>Spring</button>
+                </div>
+            </div>
+
+            <button class="generate-button" onclick="generateLook()">
+                Generate My Look →
             </button>
 
         </div>
 
     </main>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
