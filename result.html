@@ -202,3 +202,30 @@
 
 
     <a href="styling.html" class="back-button">
+        Create Another Look →
+    </a>
+
+
+</main>
+
+
+<script>
+
+    document.getElementById("occasion").textContent =
+        localStorage.getItem("occasion") || "Not selected";
+
+    document.getElementById("vibe").textContent =
+        localStorage.getItem("vibe") || "Not selected";
+
+    document.getElementById("colour").textContent =
+        localStorage.getItem("colour") || "Not selected";
+
+    document.getElementById("season").textContent =
+        localStorage.getItem("season") || "Not selected";
+
+</script>
+
+
+</body>
+
+</html>
