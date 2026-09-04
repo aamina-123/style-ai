@@ -1,3 +1,3 @@
 function startStyling() {
-    alert("Let's create your perfect look ✨");
+    alert("Welcome to AURA ✨ Your personal AI stylist is ready!");
 }
