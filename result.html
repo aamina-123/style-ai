@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your AURA Look</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .result-page {
+            min-height: 100vh;
+            padding: 90px 9%;
+            background: #f4efe7;
+            text-align: center;
+        }
+
+        .result-small-title {
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: #75695d;
+            margin-bottom: 25px;
+        }
+
+        .result-page h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(55px, 7vw, 90px);
+            font-weight: normal;
+            line-height: 1;
+            color: #2d2925;
+            margin-bottom: 20px;
+        }
+
+        .result-page h1 span {
+            font-style: italic;
+        }
+
+        .result-description {
+            max-width: 600px;
+            margin: 0 auto 60px;
+            color: #75695d;
+            line-height: 1.7;
+        }
+
+        .look-card {
+            max-width: 850px;
+            margin: auto;
+            padding: 55px;
+            border: 1px solid #d1c7b9;
+            background: #eee7dc;
+            text-align: left;
+        }
+
+        .look-number {
+            font-family: Georgia, serif;
+            font-size: 20px;
+            color: #75695d;
+        }
+
+        .look-card h2 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            font-weight: normal;
+            color: #2d2925;
+            margin: 15px 0 30px;
+        }
+
+        .look-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .detail {
+            border-top: 1px solid #cfc4b5;
+            padding-top: 15px;
+        }
+
+        .detail-title {
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #75695d;
+            margin-bottom: 8px;
+        }
+
+        .detail-value {
+            font-family: Georgia, serif;
+            font-size: 20px;
+            color: #2d2925;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 45px;
+            padding: 16px 30px;
+            background: #2d2925;
+            color: #f4efe7;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 700px) {
+            .result-page {
+                padding: 60px 6%;
+            }
+
+            .look-card {
+                padding: 30px;
+            }
+
+            .look-details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">AURA</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="styling.html">Discover</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="result-page">
+
+        <p class="result-small-title">
+            AURA • YOUR PERSONAL AI STYLIST
+        </p>
+
+        <h1>
+            Your perfect<br>
+            <span>look awaits.</span>
+        </h1>
+
+        <p class="result-description">
+            We've curated a look around your personality,
+            occasion and the season.
+        </p>
+
+        <div class="look-card">
+
+            <p class="look-number">01</p>
+
+            <h2>Your AURA Style</h2>
+
+            <div class="look-details">
+
+                <div class="detail">
+                    <p class="detail-title">OCCASION</p>
+                    <p class="detail-value" id="occasion">—</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">STYLE VIBE</p>
+                    <p class="detail-value" id="vibe">—</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">COLOUR PALETTE</p>
+                    <p class="detail-value" id="colour">—</p>
+                </div>
+
+                <div class="detail">
+                    <p class="detail-title">SEASON</p>
+                    <p class="detail-value" id="season">—</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <a href="styling.html" class="back-button">
+            Create Another Look →
+        </a>
+
+    </main>
+
+    <script>
+
+        const savedStyle = JSON.parse(
+            localStorage.getItem("auraStyle")
+        );
+
+        if (savedStyle) {
+            document.getElementById("occasion").textContent =
+                savedStyle.occasion;
+
+            document.getElementById("vibe").textContent =
+                savedStyle.vibe;
+
+            document.getElementById("colour
