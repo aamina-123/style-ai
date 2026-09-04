@@ -111,3 +111,94 @@ button:hover {
 
 .fashion-card {
     position
+.styling-page {
+    min-height: calc(100vh - 90px);
+    padding: 90px 9%;
+}
+
+.styling-intro {
+    max-width: 750px;
+    margin-bottom: 80px;
+}
+
+.styling-intro h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(55px, 7vw, 95px);
+    font-weight: normal;
+    line-height: 0.95;
+}
+
+.styling-intro h1 span {
+    font-style: italic;
+}
+
+.style-form {
+    max-width: 900px;
+    margin: auto;
+}
+
+.question {
+    padding: 45px 0;
+    border-top: 1px solid #d8d0c4;
+}
+
+.question-number {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.question h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.options button {
+    margin-top: 0;
+    background: transparent;
+    color: #2d2925;
+    border: 1px solid #bdb3a5;
+    padding: 14px 24px;
+}
+
+.options button:hover {
+    background: #2d2925;
+    color: #f4efe7;
+}
+
+.generate-button {
+    margin-top: 50px;
+    padding: 18px 35px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    .styling-page {
+        padding: 60px 6%;
+    }
+
+    .styling-intro {
+        margin-bottom: 50px;
+    }
+
+    .styling-intro h1 {
+        font-size: 58px;
+    }
+
+    .question h2 {
+        font-size: 27px;
+    }
+
+    .options button {
+        padding: 12px 18px;
+    }
+}
