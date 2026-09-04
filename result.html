@@ -10,11 +10,17 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+
         .result-page {
             min-height: 100vh;
-            padding: 90px 9%;
+            padding: 80px 8%;
             background: #f4efe7;
+        }
+
+        .result-intro {
             text-align: center;
+            max-width: 850px;
+            margin: 0 auto 70px;
         }
 
         .result-small-title {
@@ -24,53 +30,52 @@
             margin-bottom: 25px;
         }
 
-        .result-page h1 {
+        .result-intro h1 {
             font-family: Georgia, serif;
-            font-size: clamp(55px, 7vw, 90px);
+            font-size: clamp(55px, 7vw, 95px);
             font-weight: normal;
-            line-height: 1;
+            line-height: .95;
             color: #2d2925;
-            margin-bottom: 20px;
         }
 
-        .result-page h1 span {
+        .result-intro h1 span {
             font-style: italic;
         }
 
         .result-description {
-            max-width: 600px;
-            margin: 0 auto 60px;
             color: #75695d;
             line-height: 1.7;
+            max-width: 600px;
+            margin: 25px auto 0;
         }
 
         .look-card {
-            max-width: 850px;
+            max-width: 950px;
             margin: auto;
-            padding: 55px;
-            border: 1px solid #d1c7b9;
             background: #eee7dc;
-            text-align: left;
+            border: 1px solid #d1c7b9;
+            padding: 55px;
         }
 
         .look-number {
             font-family: Georgia, serif;
-            font-size: 20px;
             color: #75695d;
+            font-size: 20px;
         }
 
         .look-card h2 {
             font-family: Georgia, serif;
-            font-size: 38px;
+            font-size: 42px;
             font-weight: normal;
             color: #2d2925;
-            margin: 15px 0 30px;
+            margin: 12px 0 35px;
         }
 
-        .look-details {
+        .style-summary {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px;
+            margin-bottom: 55px;
         }
 
         .detail {
@@ -91,18 +96,40 @@
             color: #2d2925;
         }
 
+        .recommendation {
+            border-top: 1px solid #cfc4b5;
+            padding-top: 35px;
+        }
+
+        .recommendation h3 {
+            font-family: Georgia, serif;
+            font-size: 30px;
+            font-weight: normal;
+            margin-bottom: 25px;
+            color: #2d2925;
+        }
+
+        .recommendation p {
+            color: #51483f;
+            line-height: 1.8;
+        }
+
+        .recommendation-list {
+            margin-top: 25px;
+            padding-left: 20px;
+            color: #51483f;
+            line-height: 2;
+        }
+
         .back-button {
-            display: inline-block;
-            margin-top: 45px;
+            display: block;
+            width: fit-content;
+            margin: 45px auto 0;
             padding: 16px 30px;
             background: #2d2925;
             color: #f4efe7;
             text-decoration: none;
             letter-spacing: 1px;
-        }
-
-        .back-button:hover {
-            background: #51483f;
         }
 
         @media (max-width: 700px) {
@@ -115,144 +142,297 @@
                 padding: 30px;
             }
 
-            .look-details {
+            .style-summary {
                 grid-template-columns: 1fr;
             }
 
-            .result-page h1 {
-                font-size: 58px;
-            }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <header>
+<header>
 
-        <div class="logo">AURA</div>
+    <div class="logo">AURA</div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="styling.html">Discover</a>
-            <a href="#">About</a>
-        </nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="styling.html">Discover</a>
+        <a href="#">About</a>
+    </nav>
 
-    </header>
+</header>
 
 
-    <main class="result-page">
+<main class="result-page">
+
+
+    <div class="result-intro">
 
         <p class="result-small-title">
             AURA • YOUR PERSONAL AI STYLIST
         </p>
-
 
         <h1>
             Your perfect<br>
             <span>look awaits.</span>
         </h1>
 
-
         <p class="result-description">
-            We've curated a look around your personality,
-            occasion and the season.
+            A curated style recommendation created from
+            your choices, personality and season.
         </p>
 
-
-        <div class="look-card">
-
-            <p class="look-number">01</p>
-
-            <h2>Your AURA Style</h2>
+    </div>
 
 
-            <div class="look-details">
+    <div class="look-card">
 
-                <div class="detail">
+        <p class="look-number">01</p>
 
-                    <p class="detail-title">
-                        OCCASION
-                    </p>
-
-                    <p class="detail-value" id="occasion">
-                        —
-                    </p>
-
-                </div>
+        <h2>Your AURA Style</h2>
 
 
-                <div class="detail">
-
-                    <p class="detail-title">
-                        STYLE VIBE
-                    </p>
-
-                    <p class="detail-value" id="vibe">
-                        —
-                    </p>
-
-                </div>
+        <div class="style-summary">
 
 
-                <div class="detail">
+            <div class="detail">
 
-                    <p class="detail-title">
-                        COLOUR PALETTE
-                    </p>
+                <p class="detail-title">
+                    OCCASION
+                </p>
 
-                    <p class="detail-value" id="colour">
-                        —
-                    </p>
+                <p class="detail-value" id="occasion">
+                    —
+                </p>
 
-                </div>
+            </div>
 
 
-                <div class="detail">
+            <div class="detail">
 
-                    <p class="detail-title">
-                        SEASON
-                    </p>
+                <p class="detail-title">
+                    STYLE VIBE
+                </p>
 
-                    <p class="detail-value" id="season">
-                        —
-                    </p>
+                <p class="detail-value" id="vibe">
+                    —
+                </p>
 
-                </div>
+            </div>
+
+
+            <div class="detail">
+
+                <p class="detail-title">
+                    COLOUR PALETTE
+                </p>
+
+                <p class="detail-value" id="colour">
+                    —
+                </p>
+
+            </div>
+
+
+            <div class="detail">
+
+                <p class="detail-title">
+                    SEASON
+                </p>
+
+                <p class="detail-value" id="season">
+                    —
+                </p>
 
             </div>
 
         </div>
 
 
-        <a href="styling.html" class="back-button">
-            Create Another Look →
-        </a>
+        <div class="recommendation">
 
-    </main>
+            <h3 id="lookTitle">
+                Your Curated Look
+            </h3>
+
+            <p id="lookDescription">
+                Your personalised outfit recommendation will appear here.
+            </p>
+
+            <ul class="recommendation-list">
+
+                <li id="outfit">Outfit: —</li>
+
+                <li id="accessories">Accessories: —</li>
+
+                <li id="footwear">Footwear: —</li>
+
+                <li id="hair">Hair & Beauty: —</li>
+
+                <li id="tip">Styling Tip: —</li>
+
+            </ul>
+
+        </div>
+
+    </div>
 
 
-    <script>
-
-        const occasion = localStorage.getItem("occasion");
-        const vibe = localStorage.getItem("vibe");
-        const colour = localStorage.getItem("colour");
-        const season = localStorage.getItem("season");
+    <a href="styling.html" class="back-button">
+        Create Another Look →
+    </a>
 
 
-        document.getElementById("occasion").textContent =
-            occasion || "Not selected";
+</main>
 
-        document.getElementById("vibe").textContent =
-            vibe || "Not selected";
 
-        document.getElementById("colour").textContent =
-            colour || "Not selected";
+<script>
 
-        document.getElementById("season").textContent =
-            season || "Not selected";
+const occasion = localStorage.getItem("occasion");
+const vibe = localStorage.getItem("vibe");
+const colour = localStorage.getItem("colour");
+const season = localStorage.getItem("season");
 
-    </script>
+
+document.getElementById("occasion").textContent =
+    occasion || "Not selected";
+
+document.getElementById("vibe").textContent =
+    vibe || "Not selected";
+
+document.getElementById("colour").textContent =
+    colour || "Not selected";
+
+document.getElementById("season").textContent =
+    season || "Not selected";
+
+
+let outfit = "";
+let accessories = "";
+let footwear = "";
+let hair = "";
+let tip = "";
+
+
+if (
+    occasion === "College" &&
+    vibe === "Classic" &&
+    colour === "Pastels" &&
+    season === "Summer"
+) {
+
+    outfit =
+        "Pastel cotton kurta with straight-fit trousers and a lightweight dupatta.";
+
+    accessories =
+        "Delicate gold earrings, a slim watch and a structured tote.";
+
+    footwear =
+        "Comfortable neutral juttis or minimal flats.";
+
+    hair =
+        "Soft open waves or a neat low ponytail.";
+
+    tip =
+        "Keep the palette soft and add one structured accessory for a polished finish.";
+
+}
+else if (occasion === "Wedding") {
+
+    outfit =
+        "Elegant Indian outfit with refined detailing and a coordinated dupatta.";
+
+    accessories =
+        "Statement earrings with a delicate bracelet.";
+
+    footwear =
+        "Embellished juttis or comfortable block heels.";
+
+    hair =
+        "Soft waves or an elegant low bun.";
+
+    tip =
+        "Let one statement piece lead the look and keep the rest balanced.";
+
+}
+else if (occasion === "Party") {
+
+    outfit =
+        "A polished statement outfit with a flattering silhouette and subtle detailing.";
+
+    accessories =
+        "Statement earrings and a compact shoulder bag.";
+
+    footwear =
+        "Dressy flats or comfortable block heels.";
+
+    hair =
+        "Soft waves with a clean, polished finish.";
+
+    tip =
+        "Choose one standout element instead of making every piece compete.";
+
+}
+else if (vibe === "Traditional") {
+
+    outfit =
+        "A graceful traditional Indian outfit with elegant fabric and classic detailing.";
+
+    accessories =
+        "Traditional earrings with a delicate bracelet.";
+
+    footwear =
+        "Classic juttis or embellished flats.";
+
+    hair =
+        "Low bun or softly braided hair.";
+
+    tip =
+        "Keep the styling timeless and let the traditional details shine.";
+
+}
+else {
+
+    outfit =
+        "A clean, comfortable outfit styled around your selected occasion and personal vibe.";
+
+    accessories =
+        "Minimal jewellery and one practical statement accessory.";
+
+    footwear =
+        "Simple footwear that complements the outfit.";
+
+    hair =
+        "A neat hairstyle that feels effortless and polished.";
+
+    tip =
+        "Keep the look balanced by mixing one statement piece with simpler basics.";
+
+}
+
+
+document.getElementById("outfit").textContent =
+    "Outfit: " + outfit;
+
+document.getElementById("accessories").textContent =
+    "Accessories: " + accessories;
+
+document.getElementById("footwear").textContent =
+    "Footwear: " + footwear;
+
+document.getElementById("hair").textContent =
+    "Hair & Beauty: " + hair;
+
+document.getElementById("tip").textContent =
+    "Styling Tip: " + tip;
+
+</script>
+
 
 </body>
 
